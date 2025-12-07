@@ -1,5 +1,5 @@
 from functools import lru_cache
-from main import run_input
+from common import run_input
 
 
 def reduce_intervals(intervals):
@@ -15,24 +15,11 @@ def reduce_intervals(intervals):
     return new_intervals
 
 
-def is_in(num, intervals):
-    for start, end in intervals:
-        if start > num:
-            return False
-        if start <= num <= end:
-            return True
-
-    return False
-
-
-def solution(input):
+def parse_input(input):
     fresh = list(
         map(lambda x: list(map(int, x.split("-"))), input[0].split("\n")))
     available = list(map(int, input[1].split("\n")))
 
     fresh = reduce_intervals(fresh)
 
-    return sum(is_in(int(num), fresh) for num in available)
-
-
-run_input(day=5, task=1, solution=solution, split="\n\n")
+    return fresh, available

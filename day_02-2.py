@@ -1,5 +1,5 @@
 from functools import lru_cache
-from main import run_input
+from common import run_input
 
 
 @lru_cache(None)
@@ -21,10 +21,5 @@ def solution(intervals):
     return total
 
 
-run_input(
-    day=2,
-    task=2,
-    solution=solution,
-    split=",",
-    process_line=lambda x: x.split("-")
-)
+run_input(day=2, task=2, solution=solution, split=",",
+          process_line=lambda x: x.split("-"))

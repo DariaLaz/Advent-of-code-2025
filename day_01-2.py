@@ -1,4 +1,4 @@
-from main import run_input
+from common import run_input
 
 
 def solution(input):

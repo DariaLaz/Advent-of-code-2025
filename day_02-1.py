@@ -1,5 +1,5 @@
 from collections import defaultdict
-from main import run_input
+from common import run_input
 
 known = defaultdict(tuple[int, list])
 
