@@ -15,4 +15,4 @@ def solution(input):
     return count
 
 
-run_input(1, 1, solution)
+run_input(day=1, task=1, solution=solution)
