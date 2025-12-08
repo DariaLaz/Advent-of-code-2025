@@ -5,7 +5,6 @@ OUTPUT_DIR = "outputs"
 
 
 def run_input(*, day: int, task: int, solution, split="\n", process_line=None):
-    os.makedirs(INPUT_DIR, exist_ok=True)
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     filename = f"{day:02d}-{task}.txt"
